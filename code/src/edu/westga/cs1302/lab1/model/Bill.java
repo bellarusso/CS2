@@ -7,6 +7,7 @@ import java.util.List;
  * 
  * @author CS 1302
  * @version Fall 2025
+ * 
  */
 public class Bill {
 	public static final double TAX_RATE = 0.1;
