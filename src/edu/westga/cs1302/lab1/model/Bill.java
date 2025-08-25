@@ -34,6 +34,17 @@ public class Bill {
 		this.items.add(item);
 	}
 	
+	/**gets item from list
+	 * 
+	 * @precondition
+	 * @postcondition
+	 * @return
+	 */
+	
+	public ArrayList<BillItem> getItems() {
+		return new ArrayList<>(this.items);
+	}
+	
 	/** Return a String containing the list of bill items and total for the bill.
 	 * 
 	 * @precondition none
