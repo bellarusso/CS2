@@ -2,7 +2,6 @@ package edu.westga.cs1302.lab1.view;
 
 import edu.westga.cs1302.lab1.model.Bill;
 import edu.westga.cs1302.lab1.model.BillItem;
-import java.util.ArrayList;
 
 /** returns string containing list of bill tems and total
  * @precondition none
@@ -24,8 +23,8 @@ public class BillView {
         
         text += System.lineSeparator();
         text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
-        double tax = subTotal * 0.1;
-        double tip = subTotal * 0.2;
+        double tax = subTotal * Bill.TAX_RATE;
+        double tip = subTotal * Bill.TAX_RATE;
         text += "TAX - $" + tax + System.lineSeparator();
         text += "TIP - $" + tip + System.lineSeparator();
         text += "TOTAL - $" + (subTotal + tip + tax);
