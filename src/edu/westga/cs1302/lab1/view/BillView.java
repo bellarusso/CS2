@@ -25,7 +25,7 @@ public class BillView {
         text += System.lineSeparator();
         text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
         double tax = subTotal * Bill.TAX_RATE;
-        double tip = subTotal * Bill.TAX_RATE;
+        double tip = subTotal * Bill.TIP_RATE;
         text += "TAX - $" + tax + System.lineSeparator();
         text += "TIP - $" + tip + System.lineSeparator();
         text += "TOTAL - $" + (subTotal + tip + tax);
