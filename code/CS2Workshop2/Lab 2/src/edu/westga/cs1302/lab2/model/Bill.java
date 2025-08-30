@@ -47,5 +47,5 @@ public class Bill {
 	public ArrayList<BillItem> getItems() {
 		return this.items;
 	}
-
+test
 }
