@@ -1,0 +1,77 @@
+commit b90e5b29e18cfe02f446bc39e4c61cf1f13c75e1
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:39:26 2025 -0400
+
+    fixing constant name
+
+commit d5bc5b79d7c8cb38ce15ff43f2b2a6ddadde90a7
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:33:38 2025 -0400
+
+    import array
+
+commit 780539862c15deb76ac02b4beec0f0231f861d9c
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:33:11 2025 -0400
+
+    add constant to Bill
+
+commit be8d34bcde0232a7fde8a5c1cebd5a52f9123fc7
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:33:00 2025 -0400
+
+    add constants to BillView
+
+commit bb803a71b2f52826a6b8d6215654c372725c5258
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:28:58 2025 -0400
+
+    added public static final constants
+
+commit 59e75b75b16e63588c7c163fdf828816a153bf39
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:25:54 2025 -0400
+
+    created main class & package and new object
+
+commit 939db089d9b0aeb303024341b7ca24f2481c46f6
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:20:48 2025 -0400
+
+    added getText into BillView class
+
+commit 7131fd406fc80bce0b99a97dd4bfc88237cc1c4a
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:17:45 2025 -0400
+
+    made new class
+
+commit 6675021c7551b1aafda1ac34a0707a558fd518fb
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 21:16:06 2025 -0400
+
+    remove getText() method from Bill
+
+commit b8a959dc3c74dca89b937a7dfd320091ce369035
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 20:35:10 2025 -0400
+
+    intital commit, add gitignore
+
+commit 3c73fde15bcdbb0b018e6f014a04e5cd041d896b
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 20:29:51 2025 -0400
+
+    adding readme file
+
+commit 5a7f8111a521b1b15eceb9d62e10ec3a90ccff05
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 18:47:43 2025 -0400
+
+    added getter for list
+
+commit d9b1868cf8f9dcb9c4b7eee9180ca95ab1864f96
+Author: bellarusso <Irusso1@my.westga.edu>
+Date:   Mon Aug 25 18:42:45 2025 -0400
+
+    moved to src package in repo
