@@ -7,8 +7,11 @@ import org.junit.jupiter.api.Test;
 class BillItemTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
+    void testConstructorAndGetters() {
+        BillItem item = new BillItem("Coke", 3.50);
+        
+        assertEquals("Coke", item.getName(), "getName should return the correct name");
+        
+        assertEquals(3.50, item.getAmount(), 0.0001, "getAmount should return the correct amount");
+    }
 }
