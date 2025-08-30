@@ -14,4 +14,11 @@ class BillItemTest {
         
         assertEquals(3.50, item.getAmount(), 0.0001, "getAmount should return the correct amount");
     }
+	@Test
+    void testConstructorWithNullName() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            new BillItem(null, 2.50);
+        });
+        assertEquals("name must not be null.", exception.getMessage());
+    }
 }
