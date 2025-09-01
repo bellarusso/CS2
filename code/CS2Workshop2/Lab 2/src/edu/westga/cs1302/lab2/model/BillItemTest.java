@@ -13,4 +13,12 @@ class BillItemTest {
         });
         assertEquals("name must not be null.", exception.getMessage());
     }
+	
+	@Test
+    void testConstructorRejectsZeroAmount() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            new BillItem("Coke", 0.0);
+        });
+        assertEquals("amount must be positive", exception.getMessage());
+    }
 }
