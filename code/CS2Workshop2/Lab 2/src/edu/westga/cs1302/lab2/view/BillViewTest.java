@@ -37,4 +37,29 @@ class BillViewTest {
 
         assertEquals(expected, view.getText(bill));
     }
+	@Test
+    void testGetTextWithMultipleItems() {
+        Bill bill = new Bill();
+        bill.addItem(new BillItem("Burger", 10.0));
+        bill.addItem(new BillItem("Fries", 5.0));
+        bill.addItem(new BillItem("Soda", 2.5));
+        BillView view = new BillView();
+
+        double subTotal = 10.0 + 5.0 + 2.5; // 17.5
+        double tax = subTotal * Bill.TAX_RATE; // 1.75
+        double tip = subTotal * Bill.TIP_RATE; // 3.5
+        double total = subTotal + tax + tip;   // 22.75
+
+        String expected = "ITEMS" + System.lineSeparator()
+                        + "Burger - 10.0" + System.lineSeparator()
+                        + "Fries - 5.0" + System.lineSeparator()
+                        + "Soda - 2.5" + System.lineSeparator()
+                        + System.lineSeparator()
+                        + "SUBTOTAL - $" + subTotal + System.lineSeparator()
+                        + "TAX - $" + tax + System.lineSeparator()
+                        + "TIP - $" + tip + System.lineSeparator()
+                        + "TOTAL - $" + total;
+
+        assertEquals(expected, view.getText(bill));
+    }
 }
