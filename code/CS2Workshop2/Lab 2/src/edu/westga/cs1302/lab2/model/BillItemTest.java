@@ -21,4 +21,11 @@ class BillItemTest {
         });
         assertEquals("amount must be positive", exception.getMessage());
     }
+	@Test
+    void testConstructorRejectsNegativeAmount() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            new BillItem("Chips", -3.5);
+        });
+        assertEquals("amount must be positive", exception.getMessage());
+    }
 }
