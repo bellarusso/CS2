@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Test;
 class BillItemTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
+    void testConstructorRejectsNullName() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            new BillItem(null, 5.0);
+        });
+        assertEquals("name must not be null.", exception.getMessage());
+    }
 }
