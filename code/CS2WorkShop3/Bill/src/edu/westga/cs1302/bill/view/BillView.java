@@ -3,14 +3,16 @@ package edu.westga.cs1302.bill.view;
 import edu.westga.cs1302.bill.model.Bill;
 import edu.westga.cs1302.bill.model.BillItem;
 
-/** Supports displaying the information contained in a Bill.
+/**
+ * Supports displaying the information contained in a Bill.
  * 
  * @author CS 1302
  * @version Fall 2025
  */
 public class BillView {
 
-	/** Return a String containing the list of bill items and total for the bill.
+	/**
+	 * Return a String containing the list of bill items and total for the bill.
 	 * 
 	 * @precondition none
 	 * @postcondition none
@@ -26,7 +28,7 @@ public class BillView {
 			text += item.getName() + " - " + item.getAmount() + System.lineSeparator();
 			subTotal += item.getAmount();
 		}
-		
+
 		text += System.lineSeparator();
 		text += "SUBTOTAL - $" + subTotal + System.lineSeparator();
 		double tax = subTotal * Bill.TAX_RATE;
@@ -34,10 +36,10 @@ public class BillView {
 		text += "TAX - $" + this.roundToNearestHundredth(tax) + System.lineSeparator();
 		text += "TIP - $" + this.roundToNearestHundredth(tip) + System.lineSeparator();
 		text += "TOTAL - $" + this.roundToNearestHundredth(subTotal + tip + tax);
-		
+
 		return text;
 	}
-	
+
 	private double roundToNearestHundredth(double value) {
 		return (int) (value * 100) / 100.0;
 	}

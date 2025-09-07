@@ -2,7 +2,8 @@ package edu.westga.cs1302.bill.model;
 
 import java.util.ArrayList;
 
-/** Stores information for a bill.
+/**
+ * Stores information for a bill.
  * 
  * @author CS 1302
  * @version Fall 2025
@@ -10,10 +11,11 @@ import java.util.ArrayList;
 public class Bill {
 	public static final double TIP_RATE = 0.2;
 	public static final double TAX_RATE = 0.1;
-	
+
 	private ArrayList<BillItem> items;
-	
-	/** Create a new empty Bill
+
+	/**
+	 * Create a new empty Bill
 	 * 
 	 * @precondition none
 	 * @postcondition none
@@ -22,8 +24,9 @@ public class Bill {
 	public Bill() {
 		this.items = new ArrayList<BillItem>();
 	}
-	
-	/** Adds the item to the bill
+
+	/**
+	 * Adds the item to the bill
 	 * 
 	 * @precondition item != null
 	 * @postcondition item is added to the list of items in the bill
@@ -37,7 +40,8 @@ public class Bill {
 		this.items.add(item);
 	}
 
-	/** Returns the list of items in the bill
+	/**
+	 * Returns the list of items in the bill
 	 * 
 	 * @precondition none
 	 * @postconition none
