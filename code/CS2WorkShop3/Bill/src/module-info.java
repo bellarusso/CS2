@@ -1,6 +1,7 @@
 module Lab3 {
 	requires javafx.controls;
 	requires javafx.fxml;
+	requires transitive javafx.graphics;
 
 	exports edu.westga.cs1302.bill.view;
 
