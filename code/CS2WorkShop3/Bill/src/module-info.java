@@ -4,6 +4,7 @@ module Lab3 {
 	requires transitive javafx.graphics;
 
 	exports edu.westga.cs1302.bill.view;
+	exports edu.westga.cs1302.bill.model;
 
 	opens edu.westga.cs1302.bill.view to javafx.fxml;
 }
