@@ -13,36 +13,38 @@ class TestGetText {
 	@Test
 	void testNullBill() {
 		BillView view = new BillView();
-		
-		assertThrows(NullPointerException.class, ()->{view.getText(null);});
+
+		assertThrows(NullPointerException.class, () -> {
+			view.getText(null);
+		});
 	}
-	
+
 	@Test
 	void testEmptyBill() {
 		BillView view = new BillView();
 		Bill bill = new Bill();
-		
+
 		String result = view.getText(bill);
-		
+
 		String expected = "ITEMS" + System.lineSeparator();
 		expected += System.lineSeparator();
 		expected += "SUBTOTAL - $0.0" + System.lineSeparator();
 		expected += "TAX - $0.0" + System.lineSeparator();
 		expected += "TIP - $0.0" + System.lineSeparator();
 		expected += "TOTAL - $0.0";
-		
+
 		assertEquals(expected, result);
 	}
-	
+
 	@Test
 	void testOneItemInBill() {
 		BillView view = new BillView();
 		Bill bill = new Bill();
 		BillItem item1 = new BillItem("orange", 1);
 		bill.addItem(item1);
-		
+
 		String result = view.getText(bill);
-		
+
 		String expected = "ITEMS" + System.lineSeparator();
 		expected += "orange - 1.0" + System.lineSeparator();
 		expected += System.lineSeparator();
@@ -50,10 +52,10 @@ class TestGetText {
 		expected += "TAX - $0.1" + System.lineSeparator();
 		expected += "TIP - $0.2" + System.lineSeparator();
 		expected += "TOTAL - $1.3";
-		
+
 		assertEquals(expected, result);
 	}
-	
+
 	@Test
 	void testMultipleItemsInBill() {
 		BillView view = new BillView();
@@ -62,9 +64,9 @@ class TestGetText {
 		bill.addItem(item1);
 		BillItem item2 = new BillItem("banana", 2);
 		bill.addItem(item2);
-		
+
 		String result = view.getText(bill);
-		
+
 		String expected = "ITEMS" + System.lineSeparator();
 		expected += "orange - 1.0" + System.lineSeparator();
 		expected += "banana - 2.0" + System.lineSeparator();
@@ -73,7 +75,7 @@ class TestGetText {
 		expected += "TAX - $0.3" + System.lineSeparator();
 		expected += "TIP - $0.6" + System.lineSeparator();
 		expected += "TOTAL - $3.9";
-		
+
 		assertEquals(expected, result);
 	}
 

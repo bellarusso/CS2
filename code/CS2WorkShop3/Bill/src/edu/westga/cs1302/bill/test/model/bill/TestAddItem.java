@@ -12,16 +12,18 @@ class TestAddItem {
 	@Test
 	void testNullItem() {
 		Bill bill = new Bill();
-		assertThrows(IllegalArgumentException.class, ()->{bill.addItem(null);});
+		assertThrows(IllegalArgumentException.class, () -> {
+			bill.addItem(null);
+		});
 	}
 
 	@Test
 	void testAddToEmptyBill() {
 		Bill bill = new Bill();
 		BillItem item1 = new BillItem("orange", 1);
-		
+
 		bill.addItem(item1);
-		
+
 		assertEquals(1, bill.getItems().size(), "checking number of bill items");
 		assertEquals("orange", bill.getItems().get(0).getName(), "checking name of the first bill item");
 		assertEquals(1, bill.getItems().get(0).getAmount(), "checking amount of the first bill item");
@@ -33,9 +35,9 @@ class TestAddItem {
 		BillItem item1 = new BillItem("orange", 1);
 		bill.addItem(item1);
 		BillItem item2 = new BillItem("banana", 2);
-		
+
 		bill.addItem(item2);
-		
+
 		assertEquals(2, bill.getItems().size(), "checking number of bill items");
 		assertEquals("orange", bill.getItems().get(0).getName(), "checking name of the first bill item");
 		assertEquals(1, bill.getItems().get(0).getAmount(), "checking amount of the first bill item");

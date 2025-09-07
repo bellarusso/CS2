@@ -42,6 +42,7 @@ public class BillSystemAppController {
 		}
 		BillItem item = new BillItem(name, amount);
 		bill.addItem(item);
-		billDisplayArea.setText(bill.toString()); // Or use BillView.getText(bill) if you have it
+		BillView view = new BillView();
+		billDisplayArea.setText(view.getText(bill)); // Or use BillView.getText(bill) if you have it
 	}
 }
