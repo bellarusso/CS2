@@ -1,7 +1,6 @@
-package edu.westga.cs1302.bill.test.model.bill;
+package edu.westga.cs1302.bill.test.model;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 import edu.westga.cs1302.bill.model.Bill;
